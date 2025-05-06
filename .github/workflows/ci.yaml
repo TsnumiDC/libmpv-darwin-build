@@ -39,7 +39,12 @@ jobs:
         # manages all builds. So the time per rule must be limited.
         run: |
           VERSION=${{ steps.version.outputs.version }}
+          make build/output/libmpv-libs_${VERSION}_ios-arm64-audio-default.tar.gz
+          make build/output/libmpv-libs_${VERSION}_ios-arm64-audio-full.tar.gz
+          make build/output/libmpv-libs_${VERSION}_ios-arm64-audio-encodersgpl.tar.gz
           make build/output/libmpv-libs_${VERSION}_ios-arm64-video-default.tar.gz
+          make build/output/libmpv-libs_${VERSION}_ios-arm64-video-full.tar.gz
+
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
