@@ -26,12 +26,6 @@ jobs:
 
       - name: Print tool versions
         run: make tool-versions
-        
-      - name: Add write permissions
-        run: |
-          # 递归授予当前用户对仓库目录的完全控制权
-          sudo chown -R $USER:staff .
-          sudo chmod -R u+rwX .
 
       - name: Determine version
         id: version
