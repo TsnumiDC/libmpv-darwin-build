@@ -14,15 +14,10 @@ jobs:
 
       - name: Install requirements
         run: |
-          # 安装指定版本工具
-          brew install cmake@3.27 ninja@1.11 go@1.21 nasm
-
-          # 链接版本化工具
-          brew link --force cmake@3.27 ninja@1.11 go@1.21
-
           # 安装指定版本Meson
           pip3 install meson==1.2.1
-
+          # 安装指定版本工具
+          brew install cmake ninja go nasm
       - name: Print tool versions
         run: make tool-versions
 
