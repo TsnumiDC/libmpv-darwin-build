@@ -242,6 +242,8 @@ video_default_options = [
     '--enable-demuxer=dash', # --enable-libxml2 required
     '--enable-demuxer=webm_dash_manifest',
 
+    '--enable-muxer=mp4',
+    
     '--enable-demuxer=ass',
     '--enable-demuxer=srt',
     '--enable-demuxer=stl',
