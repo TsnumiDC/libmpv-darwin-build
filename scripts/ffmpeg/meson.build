@@ -266,6 +266,9 @@ video_default_options = [
     '--enable-demuxer=subviewer1',
     '--enable-demuxer=vplayer',
 
+    '--enable-muxer=mp4',
+
+
     # hwaccels
     '--enable-hwaccel=h263_videotoolbox',
     '--enable-hwaccel=h264_videotoolbox',
