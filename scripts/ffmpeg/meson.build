@@ -11,7 +11,7 @@ objc = meson.get_compiler('objc')
 nm = find_program('nm')
 ar = find_program('ar')
 strip = find_program('strip')
-pkg_config = find_program('pkgconfig')
+pkg_config = find_program('pkg-config')
 
 # build options
 c_args = get_option('c_args')
@@ -242,6 +242,9 @@ video_default_options = [
     '--enable-demuxer=dash', # --enable-libxml2 required
     '--enable-demuxer=webm_dash_manifest',
 
+
+    '--enable-muxer=mp4',
+
     '--enable-demuxer=ass',
     '--enable-demuxer=srt',
     '--enable-demuxer=stl',
@@ -258,6 +261,12 @@ video_default_options = [
     '--enable-hwaccel=mpeg2_videotoolbox',
     '--enable-hwaccel=mpeg4_videotoolbox',
     '--enable-hwaccel=vp9_videotoolbox',
+
+    '--enable-encoder=mjpeg',
+    '--enable-encoder=ljpeg',
+    '--enable-encoder=jpegls',
+    '--enable-encoder=jpeg2000',
+    '--enable-encoder=png',
 ]
 
 audio_full_options = [

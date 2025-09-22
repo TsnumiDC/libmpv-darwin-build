@@ -8,7 +8,10 @@ cd ${SRC_DIR}
 cp ${PROJECT_DIR}/scripts/pkg-config/meson.build ./meson.build
 meson setup build \
     --cross-file ${PROJECT_DIR}/cross-files/${OS}-${ARCH}.ini \
-    --prefix="${OUTPUT_DIR}"
+    --prefix="${OUTPUT_DIR}" \
+    -Dwerror=false \
+    -Dc_args=-Wno-int-conversion
+
 
 meson compile -C build pkg-config
 
